@@ -103,8 +103,29 @@ function renderHomePage(total, donateTotal, index){
 }
 
 
-// ------------------------------------------
-
+// redner modal
+function renderModal(head, total, index, isValid){
+    if(isValid === true){
+        if(index === 0 && isValid === true){
+            modalText[index].innerHTML = `Thank you for the donation for Noakhali`;
+        }
+        else if(index === 1 && isValid === true){
+            modalText[index].innerHTML = `Thank you for the donation for Feni`;
+        }
+        else if(index === 2 && isValid === true){
+            modalText[index].innerHTML = `Thank you for the donation for Qouta Movement`;
+        }
+        modalHead[index].innerHTML = head;
+        modalTotal[index].innerHTML = total;
+        modalIcon[index].src = 'asset/img/thanks.png';
+    }
+    else{
+        modalHead[index].innerHTML = 'Unsuccessfull';
+        modalText[index].innerHTML = head;
+        modalTotal[index].innerHTML = total;
+        modalIcon[index].src = 'asset/img/sadface.png';
+    }
+}
 
 // history card
 function historyCard(donateAmmout, index){
