@@ -37,24 +37,19 @@ donationSection.addEventListener('click', (e)=>{
     // console.log(target.id);
 })
 
-// ---------------------------------------------------------------------------------
-
-// page opener
-navBtns.addEventListener('click', (e)=>{
-    let target = e.target;
-    if(target.id === 'donation_btn'){
-        target.style.backgroundColor = '#B4F461';
-        target.nextElementSibling.removeAttribute('style');
-        historySection.classList.add('hidden');
-        donationSection.classList.remove('hidden');
-    }
-    else if(target.id === 'history_btn'){
-        target.style.backgroundColor = '#B4F461';
-        target.previousElementSibling.removeAttribute('style');
-        donationSection.classList.add('hidden');
-        historySection.classList.remove('hidden');
+// sticky navbar
+window.addEventListener('scroll', function(){
+    const headerSection = document.getElementsByClassName('header')[0];
+    if(window.scrollY > 100){
+        headerSection.style.backgroundColor = 'transparent';
+        // navBtnSection.style.marginTop = '1px';
+    }else{
+        headerSection.style.backgroundColor = '#F9F7F3';
+        // navBtnSection.style.marginTop = '80px';
     }
 });
+
+// -----------------------------------------------------------------------
 
 // calculation
 function calculation(index){
