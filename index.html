@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primaryGreen': '#B4F461',
+              }
+            }
+          }
+        }
+      </script>
+      <!-- daisyUI -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- google fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>DONATE</title>
+</head>
+<body>
+    <!-- ------------------------------------ -->
+    <header class="mb-8 md:sticky relative top-0 z-50">
+        <div class="backdrop-blur-md w-full h-full absolute -z-10"></div>
+        <section class="bg-[#F9F7F3] pt-4 lg:pb-9 header z-50">
+            <div class="container">
+                <div class="navbar">
+                    <div class="navbar-start">
+                      <div class="dropdown md:hidden">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h8m-8 6h16" />
+                          </svg>
+                        </div>
+                        <ul
+                          tabindex="0"
+                          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-auto shadow">
+                          <li>
+                            <a class="btn btn-ghost text-sm bg-[#B4F461] px-[10px]" href="index2.html">Blog</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a class="btn btn-ghost text-xl bg-[#B4F461] px-9 md:block hidden pt-[9px]" href="index2.html">Blog</a>
+                    </div>
+                    <div class="navbar-center lg:flex">
+                      <a href="#" class="flex justify-center items-center font-semibold text-xl gap-4">
+                        <img src="asset/img/logo.png" width="48px" alt="logo">
+                        <span class="hidden md:block">Donate Bangladesh</span>
+                      </a>
+                    </div>
+                    <div class="navbar-end">
+                      <img src="asset/img/coin.png" class="pr-3" alt="coin image">
+                      <p class="text-xl" id="total">10500 BDT</p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <section class="lg:mt-14 mt-4 z-50" id="nav-btn-section">
+            <div class="container flex gap-4 justify-center items-center" id="nav_btns">
+                <button class="btn btn-outline px-8 py-4" style="background-color: #B4F461;" id="donation_btn">Donation</button>
+                <button class="btn btn-outline py-4 px-8" id="history_btn">History</button>
+            </div>
+        </section>
+    </header>
+    <main>
+      <!-- donation start -->
+        <section class="b" id="donation">
+            <div class="card_container container flex flex-col gap-8">
+                <!-- card 1 -->
+                <div class="card gap-8 flex-col md:flex-row card-side bg-base-100 shadow-xl p-8">
+                    <figure class="w-full">
+                      <img
+                        src="asset/img/noakhali.png"
+                        class="h-full rounded-xl"
+                        alt="Movie" />
+                    </figure>
+                    <div class="">
+                      <div class="bg-[#1111110D] max-w-fit py-3 px-4 rounded-lg text-center">
+                        <img src="asset/img/coin.png" class="inline" alt="coin image">
+                        <span class="donate_total">1200 BDT</span>
+                      </div>
+                      <h1 class="text-xl font-bold pt-4">Donate for Flood at Noakhali, Bangladesh</h1>
+                      <p class="font-light text-[#111111B3] mt-4 mb-6">
+                        Support the flood victims in Noakhali, Bangladesh, by donating today. 
+                        Your contributions can provide essential relief, including food, clean water, 
+                        and shelter for displaced families. Together, we can help rebuild lives 
+                        and restore hope to those affected by the disaster.
+                      </p>
+                      <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                      <!-- modal -->
+                      <div class="mt-4">
+                        <button class="btn w-full bg-[#B4F461]" id="donate1" onclick="my_modal_1.showModal()">Donate</button>
+                        <dialog id="my_modal_1" class="modal">
+                        <div class="modal-box w-11/12 max-w-5xl">
+                            <h3 class="text-lg font-bold">
+                                <span class="pb-4"><img class="modal-icon" src="asset/img/thanks.png" alt=""></span>
+                                <span class="modal-head">Congratulations!</span>  
+                            </h3>
+                            <p class="py-4 modal-text">Thank you for the donation for Noakhali</p>
+                            <p class="pt-4">Your balance: <span class="bg-[#B4F461] modal-total">5300 BDT</span></p>
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
+                      </div>
+                  </div>
+                  </div>
+                  <!-- card 2 -->
+                  <div class="card gap-8 flex-col md:flex-row card-side bg-base-100 shadow-xl p-8">
+                    <figure class="w-full">
+                      <img
+                        src="asset/img/feni.png"
+                        class="h-full rounded-xl"
+                        alt="Movie" />
+                    </figure>
+                    <div class="">
+                      <div class="bg-[#1111110D] max-w-fit py-3 px-4 rounded-lg text-center">
+                        <img src="asset/img/coin.png" class="inline" alt="coin image">
+                        <span class="donate_total">7400 BDT</span>
+                      </div>
+                      <h1 class="text-xl font-bold pt-4">Donate for Flood Relief in Feni,Bangladesh</h1>
+                      <p class="font-light text-[#111111B3] mt-4 mb-6">
+                        Help the flood-affected communities in Feni, Bangladesh, by making a donation 
+                        today. Your support can provide critical relief, such as food, clean water, and 
+                        emergency shelter, to families in need. Together, we can bring hope and recovery 
+                        to those impacted.
+                      </p>
+                      <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                      <!-- modal -->
+                      <div class="mt-4">
+                        <button class="btn w-full bg-[#B4F461]" id="donate2" onclick="my_modal_2.showModal()">Donate</button>
+                        <dialog id="my_modal_2" class="modal">
+                        <div class="modal-box w-11/12 max-w-5xl">
+                            <h3 class="text-lg font-bold">
+                                <span class="pb-4"><img class="modal-icon" src="asset/img/thanks.png" alt="thanks icon"></span>
+                                <span class="modal-head">Congratulations!</span> 
+                            </h3>
+                            <p class="py-4 modal-text">Thank you for the donation for Noakhali</p>
+                            <p class="pt-4">Your balance: <span class="bg-[#B4F461] modal-total">5300 BDT</span></p>
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
+                      </div>
+                  </div>
+                  </div>
+                  <!-- card 3 -->
+                  <div class="card gap-8 flex-col md:flex-row card-side bg-base-100 shadow-xl p-8">
+                    <figure class="w-full">
+                      <img
+                        src="asset/img/quota-protest.png"
+                        class="h-full rounded-xl"
+                        alt="Movie" />
+                    </figure>
+                    <div class="">
+                      <div class="bg-[#1111110D] max-w-fit py-3 px-4 rounded-lg text-center">
+                        <img src="asset/img/coin.png" class="inline" alt="coin image">
+                        <span class="donate_total">4500 BDT</span>
+                      </div>
+                      <h1 class="text-xl font-bold pt-4">Aid for Injured in the Quota Movement</h1>
+                      <p class="font-light text-[#111111B3] mt-4 mb-6">
+                        Support those injured during the Quota Movement by donating today. 
+                        Your contribution will help provide medical care, rehabilitation, and 
+                        essential services for individuals affected by this cause. Together, 
+                        we can stand in solidarity and assist those in their journey toward healing.
+                      </p>
+                      <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                      <!-- modal -->
+                      <div class="mt-4">
+                        <button class="btn w-full bg-[#B4F461]" id="donate3" onclick="my_modal_3.showModal()">Donate</button>
+                        <dialog id="my_modal_3" class="modal">
+                        <div class="modal-box w-11/12 max-w-5xl">
+                            <h3 class="text-lg font-bold">
+                                <span class="pb-4"><img class="modal-icon" src="asset/img/thanks.png" alt=""></span>
+                                <span class="modal-head">Congratulations!</span>  
+                            </h3>
+                            <p class="py-4 modal-text">Thank you for the donation for Noakhali</p>
+                            <p class="pt-4">Your balance: <span class="bg-[#B4F461] modal-total">5300 BDT</span></p>
+                            <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                            </div>
+                        </div>
+                        </dialog>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+        </section>
+        <!-- donation end -->
+
+        <!-- history start -->
+         
+         <!-- history end -->
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

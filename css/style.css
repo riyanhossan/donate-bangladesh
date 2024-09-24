@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+}
+.container{
+    width: 85% !important;
+    margin: auto;
+}
