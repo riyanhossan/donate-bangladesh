@@ -49,7 +49,22 @@ window.addEventListener('scroll', function(){
     }
 });
 
-// -----------------------------------------------------------------------
+// page opener
+navBtns.addEventListener('click', (e)=>{
+    let target = e.target;
+    if(target.id === 'donation_btn'){
+        target.style.backgroundColor = '#B4F461';
+        target.nextElementSibling.removeAttribute('style');
+        historySection.classList.add('hidden');
+        donationSection.classList.remove('hidden');
+    }
+    else if(target.id === 'history_btn'){
+        target.style.backgroundColor = '#B4F461';
+        target.previousElementSibling.removeAttribute('style');
+        donationSection.classList.add('hidden');
+        historySection.classList.remove('hidden');
+    }
+});
 
 // calculation
 function calculation(index){
@@ -88,29 +103,7 @@ function renderHomePage(total, donateTotal, index){
 }
 
 
-// redner modal
-function renderModal(head, total, index, isValid){
-    if(isValid === true){
-        if(index === 0 && isValid === true){
-            modalText[index].innerHTML = `Thank you for the donation for Noakhali`;
-        }
-        else if(index === 1 && isValid === true){
-            modalText[index].innerHTML = `Thank you for the donation for Feni`;
-        }
-        else if(index === 2 && isValid === true){
-            modalText[index].innerHTML = `Thank you for the donation for Qouta Movement`;
-        }
-        modalHead[index].innerHTML = head;
-        modalTotal[index].innerHTML = total;
-        modalIcon[index].src = 'asset/img/thanks.png';
-    }
-    else{
-        modalHead[index].innerHTML = 'Unsuccessfull';
-        modalText[index].innerHTML = head;
-        modalTotal[index].innerHTML = total;
-        modalIcon[index].src = 'asset/img/sadface.png';
-    }
-}
+// ------------------------------------------
 
 
 // history card

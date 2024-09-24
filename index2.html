@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primary-green': '#B4F461',
+              }
+            }
+          }
+        }
+      </script>
+      <!-- daisyUI -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>DONATE2</title>
+</head>
+<body>
+    <header>
+      <section class="bg-[#F9F7F3] pt-4 pb-11 header z-50">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <div class="dropdown md:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-auto shadow">
+                      <li>
+                        <a class="btn btn-ghost text-sm bg-[#B4F461] px-[10px]" href="index.html">Home</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl bg-[#B4F461] px-9 md:block hidden pt-[9px]" href="index.html">Home</a>
+                </div>
+                <div class="navbar-center lg:flex">
+                  <a href="#" class="flex justify-center items-center font-semibold text-xl gap-4">
+                    <img src="asset/img/logo.png" width="48px" alt="logo">
+                    <span class="hidden md:block" id="a">Donate Bangladesh</span>
+                  </a>
+                </div>
+                <div class="navbar-end">
+                  <img src="asset/img/faq.png" class="" alt="coin image">
+                </div>
+              </div>
+        </div>
+    </section>
+    </header>
+    <main>
+      <section class="container mt-10">
+        <h1 class="text-center text-4xl font-semibold mb-4">Frequently Asked Questions</h1>
+        <div class="card_container pt-10">
+          <!-- collapse 1 -->
+          <div tabindex="0" class="collapse mb-5 collapse-plus border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-semibold">How do you change the text of an HTML element using JavaScript?</div>
+            <div class="collapse-content">
+              <p>
+                You can change the text of an HTML element by accessing the element using 
+                JavaScript and then modifying its textContent or innerHTML property. The 
+                textContent property updates the plain text inside an element, while innerHTML allows you to insert HTML tags as well as text. textContent is typically safer if 
+                you're only changing text because it doesn't interpret any HTML that might be included in the string.
+              </p>
+            </div>
+          </div>
+          <!-- collapse 2 -->
+          <div tabindex="0" class="collapse mb-5 collapse-plus border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-semibold">How can you hide or show an element in the DOM?</div>
+            <div class="collapse-content">
+              <p>
+                To hide or show a DOM element, you can manipulate its style.display property. 
+                Setting display to 'none' will completely hide the element from the page, meaning 
+                it will not occupy any space in the document. To show it again, you can reset the display 
+                to its previous value, usually 'block', 
+                'inline', or 'flex', depending on the type of element and how it should be displayed.
+              </p>
+            </div>
+          </div>
+          <!-- collapse 3 -->
+          <div tabindex="0" class="collapse mb-5 collapse-plus border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-semibold">How do you add an event listener to a DOM element?</div>
+            <div class="collapse-content">
+              <p>
+                An event listener allows you to detect user interactions or events such as clicks, 
+                keypresses, mouse movements, or form submissions. To add an event listener to an element, 
+                use the addEventListener() method. This method takes two main arguments: 
+                the event type (like 'click' or 'keydown') and the function that will be executed when the event occurs
+              </p>
+            </div>
+          </div>
+          <!-- collapse 4 -->
+          <div tabindex="0" class="collapse mb-5 collapse-plus border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-semibold">How do you get the value of an input field in JavaScript?</div>
+            <div class="collapse-content">
+              <p>
+                You can retrieve the value entered into an input field using the value property. 
+                This is often used for forms, where you need to access the user’s input to perform validation, send the data to a server, or manipulate it in other ways. You can apply 
+                this method to various types of input elements, including text boxes, password fields, 
+                and text areas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
